@@ -9,7 +9,7 @@ from pathlib import Path
 class YouTubeChannelTracker:
     def __init__(self):
         self.log_file = "logs.txt"
-        self.channel_url = "https://www.youtube.com/@mikxqs"
+        self.channel_url = "https://www.youtube.com/@hoody_yt"
         self.base_output = "channel_videos.txt"
         self.temp_file = "temp.txt"
         self.restricted_file = "Restricted.txt"
@@ -235,7 +235,7 @@ class YouTubeChannelTracker:
                 self.log_message(f"Processing ID: {video_id}")
                 
                 video_url = f"https://www.youtube.com/watch?v={video_id}"
-                command = f'yt-dlp --skip-download --print "ID: %(id)s | Title: %(title)s | Date: %(upload_date)s" "{video_url}"'
+                command = f'yt-dlp --skip-download --print "ID: %(id)s | Title: %(title)s | Date: %(upload_date)s | Description: %(description)s" "{video_url}"'
                 
                 process = self.run_command(command)
                 succeeded = False

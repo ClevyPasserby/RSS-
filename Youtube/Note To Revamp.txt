@@ -1,0 +1,3 @@
+When you have time, revamp to include youtube description and update to mrss format instead of basic, and deal with korean lang somacguffin, and scrap the current format system in favor of json instead
+
+Note: yt-dlp --skip-download -j --print "ID: %(id)s | Title: %(alt_title)s | Date: %(upload_date)s | Description: %(description)s" "https://www.youtube.com/watch?v=5QrUzrPX2yo" > channel.txt
